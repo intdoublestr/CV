@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV</title>
+    <style>
+        .A {
+            color: white;
+            text-align: center;
+            height: 450px;
+            width: 270px;
+            padding: 25px 50px 0px 30px;
+            background-color: rgba(255, 0, 0, 0.7);
+            position: relative;
+            top: 230px;
+            right: 10px;
+        }
+
+        .B {
+            text-align: center;
+            height: 195px;
+            width: 125px;
+            background-color: rgba(255, 0, 0, 0.7);
+            position: relative;
+            top: -505px;
+            left: 100px;
+        }
+
+        .C {
+            color: rgba(255, 0, 0, 0.7);
+            position: relative;
+            top: -650px;
+            left: 240px;
+            font-size: 40px;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .D {
+            font-weight: bold;
+            color: rgba(255, 0, 0, 0.7);
+            position: relative;
+            top: -580px;
+            left: 360px;
+        }
+
+        :root {
+            --background-color: #ffffff;
+            --text-color: #000000;
+            --heading-color: rgba(255, 0, 0, 0.7);
+        }
+
+        [data-theme="dark"] {
+            --background-color: #121212;
+            --text-color: #ffffff;
+            --heading-color: rgba(255, 255, 255, 0.7);
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        h1.C {
+            color: var(--heading-color);
+            transition: color 0.3s ease-in-out;
+        }
+
+        F{
+            color: var(--heading-color);
+            transition: color 0.3s ease-in-out;
+        }
+
+        #theme-toggle {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button id="theme-toggle">Dark Mode</button>
+
+    <div class="A">
+        <div style="font-weight: bold;">OBJECTIVE</div>
+        <p>Seeking to utilize excellent communication, interpersonal, and organizational skills to complete tasks. Reliable with a good work ethic and the ability to quickly adapt to new tasks and environments.</p>
+        <div style="font-weight: bold;">ADDRESS</div>
+        <p>King Abdluaziz<br>
+           Buraidah, Qassim, 52, 211<br>
+           Saudi Arabia
+        </p>
+        <div style="font-weight: bold;">PHONE</div>
+        <p>0580274613</p>
+        <div style="font-weight: bold;">EMAIL</div>
+        <p>AbdulelahSabeq@gmail.com</p>
+    </div>
+
+    <div class="B"></div>
+    <h1 class="C">Abdulelah<br>Al-Fozan</h1>
+    <p style="position: relative; top: -555px; left: 420px; color: rgba(255, 0, 0, 0.7); font-weight: bold;">________________________________________________________________________________</p>
+    
+    <div class="D">
+        SKILLS
+        <ol class="F"style="color: rgba(255, 0, 0, 0.7); transition: color 0.3s ease-in-out;">
+            <li>Programmer</li>
+            <li>Web Developer</li>
+            <li>Creativity</li>
+            <li>Flexible Schedule</li>
+            <li>Computer Skills</li>
+        </ol>
+        <p>EDUCATION</p> 
+        <p style="color: rgba(255, 0, 0, 0.7);">Qassim University <br>Bachelor Computer Science</p>
+        <p>LANGUAGES</p>
+        <p style="color: rgba(255, 0, 0, 0.7);">Native in Arabic <br> Fluent in English</p>
+        <p>CERTIFICATION</p>
+        <ol style="color: rgba(255, 0, 0, 0.7);">
+            <li>Course in Ethical Hacking</li>
+            <li>Course in HTML</li>
+            <li>Course in CSS</li>
+        </ol>
+    </div>
+    <p style="position: relative; top: -865px; left: 470px; color: rgba(255, 0, 0, 0.7); font-weight: bold;">__________________________________________________________________________</p>
+    <p style="position: relative; top: -813px; left: 470px; color: rgba(255, 0, 0, 0.7); font-weight: bold;">__________________________________________________________________________</p>
+    <p style="position: relative; top: -760px; left: 470px; color: rgba(255, 0, 0, 0.7); font-weight: bold; padding: 0px 0px 0px 30px;">_______________________________________________________________________</p>
+    <div class="dropdown" data-bs-theme="dark"></div>
+
+    <script>
+        const toggleButton = document.getElementById('theme-toggle');
+        toggleButton.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', newTheme);
+        });
+    </script>
+</body>
+</html>
